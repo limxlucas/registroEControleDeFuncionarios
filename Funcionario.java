@@ -9,8 +9,6 @@ public class Funcionario {
 	private String cpf;
 	private double salario;
 	
-	private static ArrayList<Funcionario> funcionarios = new ArrayList<Funcionario>();
-	
 	public Funcionario(String nome, String cargo, String cpf, double salario) {
 		this.nome = nome;
 		this.cargo = cargo;
