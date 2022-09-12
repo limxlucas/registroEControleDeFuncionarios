@@ -1,6 +1,4 @@
 package controle.de.horas;
-import java.sql.SQLException;
-import java.util.*;
 
 public class Funcionario {
 
