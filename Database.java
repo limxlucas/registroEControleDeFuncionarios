@@ -18,7 +18,6 @@ public class Database {
 		stm.setString(3, funcionario.getCargo());
 		stm.setString(4, salario);
 		stm.execute();
-		
 		connection.close();
 		
 	}
@@ -34,8 +33,7 @@ public class Database {
 			System.out.println(nome);
 		}
 		System.out.println();
-		
-		
+		connection.close();
 	}
 	
 	public static void removeFuncionario(String cpf) throws SQLException {
@@ -64,6 +62,7 @@ public class Database {
 			String salario = rs.getString("salario");
 			System.out.println("Nome: " + nome + "\n" + "CPF: " + cpf + "\n" + "Cargo: " + cargo + "\n" + "Salario: " + salario);
 		}
+		connection.close();
 	}
 	
 	public static String getFuncionario(String cpf) throws SQLException {
@@ -78,6 +77,7 @@ public class Database {
 		if(rs.next()) {
 			nome = rs.getString("Nome");
 		}
+		connection.close();
 		return nome;
 	}
 }
