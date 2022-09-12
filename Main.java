@@ -59,9 +59,9 @@ public class Main {
 			
 			if(opcao == 6) {
 				System.out.println("Saindo...");
-				teclado.close();
 				break;
 			}
+			teclado.close();
 		}
 	}
 	
@@ -97,6 +97,7 @@ public class Main {
 				}
 			}
 		}
+		teclado.close();
 	}
 	
 	public static void menu() {
