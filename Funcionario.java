@@ -1,7 +1,6 @@
 package controle.de.horas;
 
 public class Funcionario {
-
 	private String nome;
 	private String cargo;
 	private String cpf;
