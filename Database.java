@@ -18,8 +18,7 @@ public class Database {
 		stm.setString(3, funcionario.getCargo());
 		stm.setString(4, salario);
 		stm.execute();
-		connection.close();
-		
+		connection.close();	
 	}
 	
 	public static void getFuncionarios() throws SQLException {
