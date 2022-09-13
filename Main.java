@@ -61,7 +61,6 @@ public class Main {
 				System.out.println("Saindo...");
 				break;
 			}
-			teclado.close();
 		}
 	}
 	
@@ -97,7 +96,6 @@ public class Main {
 				}
 			}
 		}
-		teclado.close();
 	}
 	
 	public static void menu() {

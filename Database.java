@@ -11,7 +11,6 @@ public class Database {
 		ConnectionFactory connectionFactory = new ConnectionFactory();
 		Connection connection = connectionFactory.recuperarConexao();
 		String salario = String.valueOf(funcionario.getSalario());
-		
 		PreparedStatement stm = connection.prepareStatement("INSERT INTO FUNCIONARIO (nome, cpf, cargo, salario) VALUES (?, ?, ?, ?)");
 		stm.setString(1, funcionario.getNome());
 		stm.setString(2, funcionario.getCpf());
@@ -24,8 +23,7 @@ public class Database {
 	
 	public static void getFuncionarios() throws SQLException {
 		ConnectionFactory connectionFactory = new ConnectionFactory();
-		Connection connection = connectionFactory.recuperarConexao();
-		
+		Connection connection = connectionFactory.recuperarConexao();		
 		PreparedStatement stm = connection.prepareStatement("SELECT NOME FROM FUNCIONARIO");
 		ResultSet rs = stm.executeQuery();
 		while(rs.next()) {
@@ -39,11 +37,9 @@ public class Database {
 	public static void removeFuncionario(String cpf) throws SQLException {
 		ConnectionFactory connectionFactory = new ConnectionFactory();
 		Connection connection = connectionFactory.recuperarConexao();
-		
 		PreparedStatement stm = connection.prepareStatement("DELETE FROM FUNCIONARIO WHERE CPF = ? ");
 		stm.setString(1, cpf);
 		stm.execute();
-		
 		connection.close();
 	}
 
