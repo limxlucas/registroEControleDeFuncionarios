@@ -103,9 +103,7 @@ public class Main {
 	
 	public static String randomPassword() {
         String StringAlphaNumeric = "0123456789" + "abcdefghijklmnopqrstuvxyz";
-
         StringBuilder sb = new StringBuilder(5);
-  
         for (int i = 0; i < 5; i++) {
             int index = (int)(StringAlphaNumeric.length() * Math.random());
             sb.append(StringAlphaNumeric.charAt(index));

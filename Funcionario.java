@@ -14,7 +14,6 @@ public class Funcionario {
 		this.salario = salario;
 		this.senha = senha;
 	}
-	
 	public String getNome() {
 		return nome;
 	}

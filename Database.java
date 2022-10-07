@@ -11,7 +11,6 @@ public class Database {
 		ConnectionFactory connectionFactory = new ConnectionFactory();
 		Connection connection = connectionFactory.recuperarConexao();
 		String salario = String.valueOf(funcionario.getSalario());
-		
 		PreparedStatement stm = connection.prepareStatement("INSERT INTO FUNCIONARIO (nome, cpf, cargo, salario, psswrd) VALUES (?, ?, ?, ?, ?)");
 		stm.setString(1, funcionario.getNome());
 		stm.setString(2, funcionario.getCpf());
