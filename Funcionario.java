@@ -8,12 +8,14 @@ public class Funcionario {
 	private String cargo;
 	private String cpf;
 	private double salario;
+	private String senha;
 	
-	public Funcionario(String nome, String cargo, String cpf, double salario) {
+	public Funcionario(String nome, String cargo, String cpf, double salario, String senha) {
 		this.nome = nome;
 		this.cargo = cargo;
 		this.cpf = cpf;
 		this.salario = salario;
+		this.senha = senha;
 	}
 	
 	public String getNome() {
@@ -30,5 +32,9 @@ public class Funcionario {
 
 	public double getSalario() {
 		return salario;
+	}
+	
+	public String getSenha(){
+		return senha;
 	}
 }

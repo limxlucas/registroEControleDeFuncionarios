@@ -12,11 +12,12 @@ public class Database {
 		Connection connection = connectionFactory.recuperarConexao();
 		String salario = String.valueOf(funcionario.getSalario());
 		
-		PreparedStatement stm = connection.prepareStatement("INSERT INTO FUNCIONARIO (nome, cpf, cargo, salario) VALUES (?, ?, ?, ?)");
+		PreparedStatement stm = connection.prepareStatement("INSERT INTO FUNCIONARIO (nome, cpf, cargo, salario, psswrd) VALUES (?, ?, ?, ?, ?)");
 		stm.setString(1, funcionario.getNome());
 		stm.setString(2, funcionario.getCpf());
 		stm.setString(3, funcionario.getCargo());
 		stm.setString(4, salario);
+		stm.setString(5, funcionario.getSenha());
 		stm.execute();
 		connection.close();
 		

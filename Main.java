@@ -25,7 +25,10 @@ public class Main {
 				String salarioTemporario = teclado.nextLine();
 				double salario = Double.parseDouble(salarioTemporario);
 				
-				Funcionario funcionario = new Funcionario(nome, cargo, cpf, salario);
+				String senha = randomPassword();
+				System.out.println("A senha: " + senha + " foi criada, lembre-se dela.");
+				
+				Funcionario funcionario = new Funcionario(nome, cargo, cpf, salario, senha);
 				Database.adicionaFuncionario(funcionario);
 			}
 			
@@ -97,6 +100,18 @@ public class Main {
 				}
 			}
 		}
+	}
+	
+	public static String randomPassword() {
+        String StringAlphaNumeric = "0123456789" + "abcdefghijklmnopqrstuvxyz";
+
+        StringBuilder sb = new StringBuilder(5);
+  
+        for (int i = 0; i < 5; i++) {
+            int index = (int)(StringAlphaNumeric.length() * Math.random());
+            sb.append(StringAlphaNumeric.charAt(index));
+        }
+        return sb.toString();
 	}
 	
 	public static void menu() {
