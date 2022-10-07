@@ -1,9 +1,6 @@
 package controle.de.horas;
-import java.sql.SQLException;
-import java.util.*;
 
 public class Funcionario {
-
 	private String nome;
 	private String cargo;
 	private String cpf;

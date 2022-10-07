@@ -62,7 +62,6 @@ public class Main {
 			
 			if(opcao == 6) {
 				System.out.println("Saindo...");
-				teclado.close();
 				break;
 			}
 		}
